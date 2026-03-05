@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hungry Pebble</title>
-  <meta name="description" content="Hungry Pebble — handheld comfort, made loud and bright." />
+  <title>Hungry Pebble — Coming Soon</title>
+  <meta name="description" content="Hungry Pebble — Coming Soon." />
 
-  <!-- Punchier, modern-but-fun font (not “corporate”) -->
+  <!-- Fun, modern (less corporate) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
@@ -33,16 +33,12 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="spark">●</span> Teal. Yellow. Black. Done right.</p>
+          <p class="eyebrow"><span class="spark">●</span> Teal. Yellow. Black.</p>
 
-          <h1>
-            Handheld comfort<br />
-            that actually hits.
-          </h1>
+          <h1>Coming Soon</h1>
 
           <p class="subhead">
-            Hungry Pebble is building a modern comfort-food brand — simple ingredients,
-            consistent execution, and food made to travel.
+            Hungry Pebble Pie Co. is bringing the humble pie — in all its glory and in abundance — to the USA.
           </p>
 
           <div class="cta-row">
@@ -51,21 +47,14 @@
           </div>
 
           <p class="micro">
-            Swap the words any time in <code>index.html</code>.
+            Want to swap copy or add a menu later? Just edit <code>index.html</code> and push to GitHub.
           </p>
         </div>
 
-        <div class="hero-badge" aria-hidden="true">
-          <div class="badge-inner">
-            <h1>Coming Soon</h1>
-            <p>Hungry Pebble Pie Co.</p>
-             <img src="assets/img/trailer.png" alt="Hungry Pebble Pie Co Food Trailer">
-            <div class="badge-chips">
-              <span class="chip chip-teal">#teal</span>
-              <span class="chip chip-yellow">#yellow</span>
-              <span class="chip chip-black">#black</span>
-            </div>
-          </div>
+        <!-- Photo card -->
+        <div class="hero-media" aria-label="Hungry Pebble food trailer photo">
+          <img src="assets/img/trailer.png" alt="Hungry Pebble food trailer" />
+          <div class="media-tag"><span>Trailer concept</span></div>
         </div>
       </div>
 
@@ -80,29 +69,24 @@
           <article class="card card-teal">
             <h3>Our mission</h3>
             <p>
-              <strong>Hungry Pebble exists to make comfort food you can feel good about.</strong>
-              We keep it simple: quality ingredients, consistent execution, and a product designed for real life.
-            </p>
-            <p class="muted">
-              Replace this with your final mission statement (2 short paragraphs max).
+              <strong>Bringing the humble pie in all its glory and in abundance to the USA.</strong>
+              Comfort food you can hold in one hand — made with premium ingredients and consistent execution.
             </p>
           </article>
 
           <article class="card card-yellow">
-            <h3>What we do</h3>
-            <ul class="list">
-              <li>Handheld meals designed for speed + consistency</li>
-              <li>A brand built to scale: trailer → kiosks → more</li>
-              <li>Ops-first thinking so quality stays tight</li>
-            </ul>
+            <h3>The opportunity</h3>
+            <p>
+              Meat pies are beloved globally and still underrepresented in the U.S. We’re building a category-defining brand.
+            </p>
           </article>
 
           <article class="card card-black">
-            <h3>Why it works</h3>
+            <h3>Growth path</h3>
             <ul class="list">
-              <li>Clear menu, fast service</li>
-              <li>Food that travels well</li>
-              <li>Built for repeat visits</li>
+              <li>Start: food trailer</li>
+              <li>Then: kiosks + key accounts</li>
+              <li>Scale: contract manufacturing + distribution</li>
             </ul>
           </article>
         </div>
@@ -112,15 +96,11 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact Us</h2>
-        <p class="muted">
-          Drop us a note. We’ll get back to you.
-        </p>
+        <p class="muted">Drop us a note. We’ll get back to you.</p>
 
-        <!--
-          To make this form actually send email, use Formspree (free tier available):
-          1) Create a form at https://formspree.io/
-          2) Replace YOUR_FORM_ID below with your form ID, e.g. https://formspree.io/f/abcdwxyz
-        -->
+        <!-- Make this send email via Formspree (free tier):
+             1) Create a form at formspree.io
+             2) Replace YOUR_FORM_ID below -->
         <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="grid">
             <label>
@@ -139,7 +119,6 @@
             <textarea name="message" rows="6" required></textarea>
           </label>
 
-          <!-- simple anti-spam honeypot -->
           <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
 
           <button class="button" type="submit">Send message</button>
