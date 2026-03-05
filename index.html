@@ -4,7 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hungry Pebble</title>
-  <meta name="description" content="Hungry Pebble — simple, satisfying comfort food made with intention." />
+  <meta name="description" content="Hungry Pebble — handheld comfort, made loud and bright." />
+
+  <!-- Punchier, modern-but-fun font (not “corporate”) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -27,59 +33,77 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Handheld comfort, made with intention.</p>
-          <h1>Big flavor. Simple ingredients. No fuss.</h1>
+          <p class="eyebrow"><span class="spark">●</span> Teal. Yellow. Black. Done right.</p>
+
+          <h1>
+            Handheld comfort<br />
+            that actually hits.
+          </h1>
+
           <p class="subhead">
-            Hungry Pebble is building a modern comfort-food brand focused on
-            craveable, well-made handheld meals.
+            Hungry Pebble is building a modern comfort-food brand — simple ingredients,
+            consistent execution, and food made to travel.
           </p>
+
           <div class="cta-row">
             <a class="button" href="#contact">Contact</a>
-            <a class="button button-ghost" href="#about">Learn more</a>
+            <a class="button button-alt" href="#about">About</a>
           </div>
+
           <p class="micro">
-            Edit this copy in <code>index.html</code> whenever you’re ready.
+            Swap the words any time in <code>index.html</code>.
           </p>
         </div>
 
-        <div class="hero-card" role="presentation" aria-hidden="true">
-          <div class="hero-card-inner">
-            <p class="card-title">Quick links</p>
-            <a class="card-link" href="#about">Mission</a>
-            <a class="card-link" href="#contact">Partnerships</a>
-            <p class="card-note">Mobile-friendly, one-page layout.</p>
+        <div class="hero-badge" aria-hidden="true">
+          <div class="badge-inner">
+            <p class="badge-title">One-page site</p>
+            <p class="badge-text">Fast on mobile. Simple navigation. Built for a trailer brand.</p>
+            <div class="badge-chips">
+              <span class="chip chip-teal">#teal</span>
+              <span class="chip chip-yellow">#yellow</span>
+              <span class="chip chip-black">#black</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="hero-wave" aria-hidden="true"></div>
     </section>
 
-    <section id="about" class="section">
+    <section id="about" class="section section-pop">
       <div class="container">
         <h2>About Us</h2>
-        <div class="two-col">
-          <div class="panel">
+
+        <div class="cards">
+          <article class="card card-teal">
             <h3>Our mission</h3>
             <p>
               <strong>Hungry Pebble exists to make comfort food you can feel good about.</strong>
-              We keep it simple: quality ingredients, consistent execution, and a product that travels well.
+              We keep it simple: quality ingredients, consistent execution, and a product designed for real life.
             </p>
             <p class="muted">
-              Replace this with your final mission statement and a couple supporting sentences.
-              Two short paragraphs is perfect for a one-pager.
+              Replace this with your final mission statement (2 short paragraphs max).
             </p>
-          </div>
+          </article>
 
-          <div class="panel">
+          <article class="card card-yellow">
             <h3>What we do</h3>
             <ul class="list">
-              <li>Handheld meals designed for speed and consistency</li>
-              <li>A brand built to scale: food trailer → kiosks → more</li>
-              <li>Operations-first thinking so quality stays tight as you grow</li>
+              <li>Handheld meals designed for speed + consistency</li>
+              <li>A brand built to scale: trailer → kiosks → more</li>
+              <li>Ops-first thinking so quality stays tight</li>
             </ul>
-            <p class="muted tiny">
-              Tip: keep this list to 3–5 bullets so it reads clean on mobile.
-            </p>
-          </div>
+          </article>
+
+          <article class="card card-black">
+            <h3>Why it works</h3>
+            <ul class="list">
+              <li>Clear menu, fast service</li>
+              <li>Food that travels well</li>
+              <li>Built for repeat visits</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -88,7 +112,7 @@
       <div class="container">
         <h2>Contact Us</h2>
         <p class="muted">
-          Drop us a note. We’ll get back to you as soon as we can.
+          Drop us a note. We’ll get back to you.
         </p>
 
         <!--
@@ -129,9 +153,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Hungry Pebble</p>
-      <p class="muted">
-        <a href="#top">Back to top</a>
-      </p>
+      <p class="muted"><a href="#top">Back to top</a></p>
     </div>
   </footer>
 
