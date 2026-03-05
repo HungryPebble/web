@@ -1,358 +1,250 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hungry Pebble — Coming Soon</title>
-  <meta name="description" content="Hungry Pebble — Coming Soon." />
+:root{
+  --black:#07080a;
+  --ink:#0e1216;
+  --teal:#00b9c9;
+  --yellow:#ffc42d;
+  --white:#f7f8fb;
+  --muted:#cfd3dc;
+  --shadow:0 18px 55px rgba(0,0,0,.55);
+  --radius:20px;
+}
 
-  <!-- Fun, modern (less corporate) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Rubik", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:var(--black);
+  color:var(--white);
+  line-height:1.5;
+}
+.container{width:min(1060px,92vw); margin:0 auto;}
+a{color:inherit;}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:.95em;}
+h1,h2,h3{
+  font-family:"Bricolage Grotesque", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing:.2px;
+}
+.muted{color:var(--muted);}
+.tiny{font-size:12.5px;}
 
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Hungry Pebble Home">
-        <img src="assets/img/logo.svg" alt="Hungry Pebble logo" />
-        <span class="brand-name">Hungry Pebble</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="spark">●</span> Teal. Yellow. Black.</p>
-
-          <h1>Coming Soon</h1>
-
-          <p class="subhead">
-            Hungry Pebble Pie Co. is bringing the humble pie — in all its glory and in abundance — to the USA.
-          </p>
-
-          <div class="cta-row">
-            <a class="button" href="#contact">Contact</a>
-            <a class="button button-alt" href="#about">About</a>
-          </div>
-
-          <p class="micro">
-            Want to swap copy or add a menu later? Just edit <code>index.html</code> and push to GitHub.
-          </p>
-        </div>
-
-        <!-- Photo card -->
-        <div class="hero-media" aria-label="Hungry Pebble food trailer photo">
-          <img src="assets/img/trailer.png" alt="Hungry Pebble food trailer" />
-          <div class="media-tag"><span>Trailer concept</span></div>
-        </div>
-      </div>
-
-      <div class="hero-wave" aria-hidden="true"></div>
-    </section>
-
-    <section id="about" class="section section-pop">
-      <div class="container">
-        <h2>About Us</h2>
-
-        <div class="cards">
-          <article class="card card-teal">
-            <h3>Our mission</h3>
-            <p>
-              <strong>Bringing the humble pie in all its glory and in abundance to the USA.</strong>
-              Comfort food you can hold in one hand — made with premium ingredients and consistent execution.
-            </p>
-          </article>
-
-          <article class="card card-yellow">
-            <h3>The opportunity</h3>
-            <p>
-              Meat pies are beloved globally and still underrepresented in the U.S. We’re building a category-defining brand.
-            </p>
-          </article>
-
-          <article class="card card-black">
-            <h3>Growth path</h3>
-            <ul class="list">
-              <li>Start: food trailer</li>
-              <li>Then: kiosks + key accounts</li>
-              <li>Scale: contract manufacturing + distribution</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p class="muted">Drop us a note. We’ll get back to you.</p>
-
-        <!-- Make this send email via Formspree (free tier):
-             1) Create a form at formspree.io
-             2) Replace YOUR_FORM_ID below -->
-        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="grid">
-            <label>
-              Name
-              <input name="name" autocomplete="name" required />
-            </label>
-
-            <label>
-              Email
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
-          </div>
-
-          <label>
-            Message
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-
-          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
-
-          <button class="button" type="submit">Send message</button>
-          <p class="tiny muted">
-            Prefer email? <a href="mailto:hello@hungrypebble.com">hello@hungrypebble.com</a>
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Hungry Pebble</p>
-      <p class="muted"><a href="#top">Back to top</a></p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>  border-bottom:1px solid var(--border);
+/* Header */
+.site-header{
+  position:sticky; top:0;
+  background:rgba(7,8,10,.82);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.10);
   z-index:10;
+}
+.site-header::after{
+  content:"";
+  display:block;
+  height:4px;
+  background:linear-gradient(90deg, var(--teal), var(--yellow));
 }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
-  gap:14px; padding:14px 0;
+  gap:14px; padding:14px 0 12px;
   flex-wrap:wrap;
 }
-
 .brand{
   display:flex; align-items:center; gap:10px;
   text-decoration:none;
-  border-radius:14px;
+  border-radius:999px;
   padding:6px 10px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
 }
-.brand:hover{background:rgba(55,111,121,.10);}
+.brand:hover{border-color:rgba(0,185,201,.45); background:rgba(0,185,201,.08);}
 .brand img{height:34px; width:auto; display:block;}
-.brand-name{font-weight:800; letter-spacing:.2px;}
+.brand-name{font-weight:800;}
 
 .nav{display:flex; gap:10px; flex-wrap:wrap;}
 .nav a{
-  color:var(--muted);
   text-decoration:none;
-  padding:8px 10px;
-  border-radius:12px;
+  padding:8px 12px;
+  border-radius:999px;
   border:1px solid transparent;
 }
-.nav a:hover{
-  color:var(--text);
-  border-color:rgba(55,111,121,.55);
-  background:rgba(55,111,121,.12);
-}
+.nav a:hover{border-color:rgba(255,196,45,.55); background:rgba(255,196,45,.10);}
 
 /* Hero */
 .hero{
-  padding:72px 0 50px;
+  padding:76px 0 58px;
+  position:relative;
+  overflow:hidden;
   background:
-    radial-gradient(900px 420px at 18% 14%, rgba(55,111,121,.40), transparent 60%),
-    radial-gradient(760px 360px at 82% 25%, rgba(212,157,72,.25), transparent 55%);
+    radial-gradient(1100px 520px at 12% 20%, rgba(0,185,201,.52), transparent 62%),
+    radial-gradient(900px 480px at 88% 26%, rgba(255,196,45,.44), transparent 60%),
+    linear-gradient(180deg, rgba(14,18,22,.55), rgba(7,8,10,0));
 }
 .hero-inner{
+  position:relative;
   display:grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap:26px;
+  grid-template-columns: 1.05fr .95fr;
+  gap:22px;
   align-items:stretch;
 }
-
-.eyebrow{
-  margin:0 0 10px;
-  color:rgba(212,157,72,.95);
-  font-weight:700;
-  letter-spacing:.2px;
-}
+.eyebrow{margin:0 0 10px; font-weight:700; color:rgba(247,248,251,.92);}
+.spark{color:var(--yellow); margin-right:6px;}
 .hero h1{
   margin:0 0 12px;
-  font-size:clamp(34px,4.4vw,56px);
-  line-height:1.02;
+  font-size:clamp(44px,5.2vw,76px);
+  line-height:1.0;
+  text-shadow:0 12px 30px rgba(0,0,0,.45);
 }
-.subhead{
-  margin:0 0 18px;
-  color:var(--muted);
-  font-size:18px;
-  max-width:62ch;
-}
-.micro{margin:14px 0 0; color:rgba(183,183,194,.85); font-size:12.5px;}
+.subhead{margin:0 0 18px; color:rgba(247,248,251,.86); font-size:18px; max-width:62ch;}
+.micro{margin:14px 0 0; color:rgba(207,211,220,.95); font-size:13px;}
 
 .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
 .button{
   display:inline-block;
   background:var(--yellow);
   color:#111;
-  padding:10px 14px;
-  border-radius:14px;
+  padding:11px 16px;
+  border-radius:999px;
   text-decoration:none;
-  font-weight:800;
-  border:1px solid rgba(0,0,0,.15);
+  font-weight:900;
+  border:2px solid rgba(0,0,0,.38);
+  box-shadow:0 12px 0 rgba(0,0,0,.28);
   cursor:pointer;
 }
-.button:hover{transform:translateY(-1px); filter:saturate(1.05);}
-.button:active{transform:translateY(0px);}
+.button:hover{transform:translateY(-1px);}
+.button:active{transform:translateY(3px); box-shadow:0 9px 0 rgba(0,0,0,.28);}
+.button-alt{background:var(--teal); color:#051014;}
 
-.button-ghost{
-  background:transparent;
-  color:var(--text);
-  border:1px solid rgba(212,157,72,.55);
-}
-.button-ghost:hover{background:rgba(212,157,72,.10);}
-
-.hero-card{
-  border-radius:18px;
-  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  border:1px solid rgba(255,255,255,.10);
+/* Photo card */
+.hero-media{
+  position:relative;
+  border-radius:var(--radius);
+  border:2px solid rgba(255,255,255,.16);
+  background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
   box-shadow:var(--shadow);
+  overflow:hidden;
 }
-.hero-card-inner{padding:18px;}
-.card-title{margin:0 0 10px; font-weight:800; letter-spacing:.2px;}
-.card-link{
+.hero-media img{
+  width:100%;
+  height:100%;
   display:block;
-  padding:10px 12px;
-  border-radius:14px;
-  text-decoration:none;
-  margin-bottom:10px;
-  border:1px solid rgba(55,111,121,.45);
-  background:rgba(55,111,121,.10);
+  object-fit:cover;
+  aspect-ratio: 1 / 1;
+  filter:saturate(1.06) contrast(1.02);
 }
-.card-link:hover{background:rgba(55,111,121,.16);}
-.card-note{margin:6px 0 0; color:rgba(183,183,194,.9); font-size:13px;}
+.media-tag{
+  position:absolute;
+  left:14px; bottom:14px;
+  background:rgba(7,8,10,.70);
+  border:1px solid rgba(255,255,255,.16);
+  padding:8px 10px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:12px;
+}
+.media-tag span{
+  background:linear-gradient(90deg, var(--teal), var(--yellow));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
 
-.hero-card img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
+.hero-wave{
+  position:absolute;
+  inset:auto 0 -1px 0;
+  height:70px;
+  background:linear-gradient(90deg, rgba(0,185,201,.55), rgba(255,196,45,.55));
+  clip-path:polygon(0 35%, 12% 55%, 25% 40%, 40% 62%, 55% 44%, 70% 64%, 85% 45%, 100% 58%, 100% 100%, 0 100%);
+  opacity:.55;
 }
 
 /* Sections */
 .section{
-  padding:58px 0;
-  border-top:1px solid var(--border);
-  scroll-margin-top:92px; /* ensures anchors aren’t hidden behind sticky header */
+  padding:64px 0;
+  border-top:1px solid rgba(255,255,255,.08);
+  scroll-margin-top:98px;
 }
-.section h2{
-  margin:0 0 14px;
-  font-size:28px;
-}
+.section h2{margin:0 0 14px; font-size:32px;}
 .section h2::after{
   content:"";
   display:block;
-  width:56px;
-  height:4px;
+  width:72px;
+  height:7px;
   border-radius:999px;
   margin-top:10px;
   background:linear-gradient(90deg, var(--teal), var(--yellow));
-  opacity:.95;
+}
+.section-pop{
+  background:
+    radial-gradient(900px 540px at 15% 30%, rgba(0,185,201,.18), transparent 60%),
+    radial-gradient(820px 520px at 85% 70%, rgba(255,196,45,.14), transparent 62%);
 }
 
-.two-col{
+/* Cards */
+.cards{
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:14px;
   margin-top:18px;
 }
-.panel{
-  background:var(--card);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:18px;
+.card{
+  border-radius:var(--radius);
+  border:2px solid rgba(255,255,255,.12);
   padding:16px;
+  box-shadow:0 14px 0 rgba(0,0,0,.24);
+  background:rgba(14,18,22,.92);
 }
-.panel h3{margin:0 0 10px; font-size:18px;}
-.muted{color:var(--muted);}
-.tiny{font-size:12.5px;}
+.card h3{margin:0 0 10px; font-size:20px;}
+.card-teal{border-color:rgba(0,185,201,.40); background:linear-gradient(180deg, rgba(0,185,201,.14), rgba(14,18,22,.92));}
+.card-yellow{border-color:rgba(255,196,45,.45); background:linear-gradient(180deg, rgba(255,196,45,.14), rgba(14,18,22,.92));}
+.card-black{border-color:rgba(255,255,255,.14); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(14,18,22,.92));}
 
-.list{
-  margin:0;
-  padding-left:18px;
-  color:var(--muted);
+.list{margin:0; padding-left:0; list-style:none; color:rgba(247,248,251,.90);}
+.list li{margin:10px 0; padding-left:28px; position:relative;}
+.list li::before{
+  content:"";
+  position:absolute; left:0; top:.55em;
+  width:12px; height:12px;
+  border-radius:999px;
+  background:var(--yellow);
+  border:2px solid rgba(0,0,0,.35);
 }
-.list li{margin:8px 0;}
 
 /* Form */
 .form{
   margin-top:16px;
-  background:var(--card);
+  background:rgba(14,18,22,.92);
   padding:16px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,.09);
-  max-width:640px;
+  border-radius:var(--radius);
+  border:2px solid rgba(0,185,201,.30);
+  max-width:720px;
+  box-shadow:0 14px 0 rgba(0,0,0,.24);
 }
-.grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:12px;
-}
-label{
-  display:block;
-  margin-bottom:12px;
-  font-size:14px;
-  color:var(--muted);
-}
+.grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px;}
+label{display:block; margin-bottom:12px; font-size:14px; color:rgba(247,248,251,.85);}
 input,textarea{
   width:100%;
   margin-top:6px;
-  padding:10px 12px;
+  padding:11px 12px;
   border-radius:14px;
-  border:1px solid rgba(255,255,255,.12);
+  border:2px solid rgba(255,255,255,.12);
   background:rgba(255,255,255,.04);
-  color:var(--text);
+  color:var(--white);
 }
-input:focus,textarea:focus{
-  outline:2px solid rgba(55,111,121,.55);
-  border-color:transparent;
-}
+input:focus,textarea:focus{outline:2px solid rgba(255,196,45,.55); border-color:transparent;}
 .honeypot{display:none;}
-.form a{color:rgba(212,157,72,.95);}
-.form a:hover{text-decoration:none; opacity:.9;}
+.form a{color:var(--yellow); text-decoration:none;}
+.form a:hover{opacity:.92;}
 
 /* Footer */
-.footer{
-  padding:28px 0;
-  border-top:1px solid var(--border);
-}
-.footer-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  flex-wrap:wrap; gap:12px;
-}
-.footer a{color:rgba(55,111,121,.95); text-decoration:none;}
+.footer{padding:28px 0; border-top:1px solid rgba(255,255,255,.08);}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+.footer a{color:var(--teal); text-decoration:none;}
 .footer a:hover{text-decoration:underline;}
 
 /* Responsive */
-@media (max-width: 860px){
-  .hero-inner{grid-template-columns:1fr; }
-  .hero{padding:56px 0 42px;}
-  .two-col{grid-template-columns:1fr;}
+@media (max-width: 920px){
+  .hero-inner{grid-template-columns:1fr;}
+  .cards{grid-template-columns:1fr;}
   .grid{grid-template-columns:1fr;}
-  .brand-name{display:none;} /* keeps header compact on mobile */
+  .brand-name{display:none;}
+  .hero-media img{aspect-ratio: 16 / 10;}
 }
