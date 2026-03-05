@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hungry Pebble</title>
+  <meta name="description" content="Hungry Pebble — simple, satisfying comfort food made with intention." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Hungry Pebble Home">
+        <img src="assets/img/logo.svg" alt="Hungry Pebble logo" />
+        <span class="brand-name">Hungry Pebble</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Handheld comfort, made with intention.</p>
+          <h1>Big flavor. Simple ingredients. No fuss.</h1>
+          <p class="subhead">
+            Hungry Pebble is building a modern comfort-food brand focused on
+            craveable, well-made handheld meals.
+          </p>
+          <div class="cta-row">
+            <a class="button" href="#contact">Contact</a>
+            <a class="button button-ghost" href="#about">Learn more</a>
+          </div>
+          <p class="micro">
+            Edit this copy in <code>index.html</code> whenever you’re ready.
+          </p>
+        </div>
+
+        <div class="hero-card" role="presentation" aria-hidden="true">
+          <div class="hero-card-inner">
+            <p class="card-title">Quick links</p>
+            <a class="card-link" href="#about">Mission</a>
+            <a class="card-link" href="#contact">Partnerships</a>
+            <p class="card-note">Mobile-friendly, one-page layout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="two-col">
+          <div class="panel">
+            <h3>Our mission</h3>
+            <p>
+              <strong>Hungry Pebble exists to make comfort food you can feel good about.</strong>
+              We keep it simple: quality ingredients, consistent execution, and a product that travels well.
+            </p>
+            <p class="muted">
+              Replace this with your final mission statement and a couple supporting sentences.
+              Two short paragraphs is perfect for a one-pager.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>What we do</h3>
+            <ul class="list">
+              <li>Handheld meals designed for speed and consistency</li>
+              <li>A brand built to scale: food trailer → kiosks → more</li>
+              <li>Operations-first thinking so quality stays tight as you grow</li>
+            </ul>
+            <p class="muted tiny">
+              Tip: keep this list to 3–5 bullets so it reads clean on mobile.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p class="muted">
+          Drop us a note. We’ll get back to you as soon as we can.
+        </p>
+
+        <!--
+          To make this form actually send email, use Formspree (free tier available):
+          1) Create a form at https://formspree.io/
+          2) Replace YOUR_FORM_ID below with your form ID, e.g. https://formspree.io/f/abcdwxyz
+        -->
+        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="grid">
+            <label>
+              Name
+              <input name="name" autocomplete="name" required />
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+          </div>
+
+          <label>
+            Message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <!-- simple anti-spam honeypot -->
+          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
+
+          <button class="button" type="submit">Send message</button>
+          <p class="tiny muted">
+            Prefer email? <a href="mailto:hello@hungrypebble.com">hello@hungrypebble.com</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Hungry Pebble</p>
+      <p class="muted">
+        <a href="#top">Back to top</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
