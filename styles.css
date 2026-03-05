@@ -1,40 +1,147 @@
-/* Hungry Pebble — one-page starter
-   Palette: teal / yellow / black
-*/
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hungry Pebble — Coming Soon</title>
+  <meta name="description" content="Hungry Pebble — Coming Soon." />
 
-:root{
-  --black:#0b0b0c;
-  --teal:#376f79;
-  --yellow:#d49d48;
+  <!-- Fun, modern (less corporate) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
 
-  --card:#121215;
-  --text:#f3f3f5;
-  --muted:#b7b7c2;
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Hungry Pebble Home">
+        <img src="assets/img/logo.svg" alt="Hungry Pebble logo" />
+        <span class="brand-name">Hungry Pebble</span>
+      </a>
 
-  --border:rgba(255,255,255,.10);
-  --shadow:0 18px 45px rgba(0,0,0,.35);
-}
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
 
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:var(--black);
-  color:var(--text);
-  line-height:1.45;
-}
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="spark">●</span> Teal. Yellow. Black.</p>
 
-.container{width:min(1040px,92vw); margin:0 auto;}
-a{color:inherit;}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:.95em;}
+          <h1>Coming Soon</h1>
 
-/* Header */
-.site-header{
-  position:sticky; top:0;
-  background:rgba(11,11,12,.82);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--border);
+          <p class="subhead">
+            Hungry Pebble Pie Co. is bringing the humble pie — in all its glory and in abundance — to the USA.
+          </p>
+
+          <div class="cta-row">
+            <a class="button" href="#contact">Contact</a>
+            <a class="button button-alt" href="#about">About</a>
+          </div>
+
+          <p class="micro">
+            Want to swap copy or add a menu later? Just edit <code>index.html</code> and push to GitHub.
+          </p>
+        </div>
+
+        <!-- Photo card -->
+        <div class="hero-media" aria-label="Hungry Pebble food trailer photo">
+          <img src="assets/img/trailer.png" alt="Hungry Pebble food trailer" />
+          <div class="media-tag"><span>Trailer concept</span></div>
+        </div>
+      </div>
+
+      <div class="hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <section id="about" class="section section-pop">
+      <div class="container">
+        <h2>About Us</h2>
+
+        <div class="cards">
+          <article class="card card-teal">
+            <h3>Our mission</h3>
+            <p>
+              <strong>Bringing the humble pie in all its glory and in abundance to the USA.</strong>
+              Comfort food you can hold in one hand — made with premium ingredients and consistent execution.
+            </p>
+          </article>
+
+          <article class="card card-yellow">
+            <h3>The opportunity</h3>
+            <p>
+              Meat pies are beloved globally and still underrepresented in the U.S. We’re building a category-defining brand.
+            </p>
+          </article>
+
+          <article class="card card-black">
+            <h3>Growth path</h3>
+            <ul class="list">
+              <li>Start: food trailer</li>
+              <li>Then: kiosks + key accounts</li>
+              <li>Scale: contract manufacturing + distribution</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p class="muted">Drop us a note. We’ll get back to you.</p>
+
+        <!-- Make this send email via Formspree (free tier):
+             1) Create a form at formspree.io
+             2) Replace YOUR_FORM_ID below -->
+        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="grid">
+            <label>
+              Name
+              <input name="name" autocomplete="name" required />
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+          </div>
+
+          <label>
+            Message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
+
+          <button class="button" type="submit">Send message</button>
+          <p class="tiny muted">
+            Prefer email? <a href="mailto:hello@hungrypebble.com">hello@hungrypebble.com</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Hungry Pebble</p>
+      <p class="muted"><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>  border-bottom:1px solid var(--border);
   z-index:10;
 }
 .header-inner{
