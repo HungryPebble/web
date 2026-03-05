@@ -142,6 +142,12 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; fo
 .card-link:hover{background:rgba(55,111,121,.16);}
 .card-note{margin:6px 0 0; color:rgba(183,183,194,.9); font-size:13px;}
 
+.hero-card img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
 /* Sections */
 .section{
   padding:58px 0;
