@@ -316,7 +316,7 @@ a {
 
 .info-card p,
 .info-card li {
-  color: var(--white);
+  color: var(--cream);
   line-height: 1.65;
   font-weight: 700;
 }
@@ -396,7 +396,7 @@ a {
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.12);
   background: #121821;
-  color: var(--white);
+  color: var(--cream);
   font: inherit;
 }
 
@@ -458,7 +458,7 @@ a {
     100% 0;
   background-size: 6px 6px, 6px 6px, 2.8rem 100%;
   background-repeat: no-repeat;
-  color: var(--white);
+  color: var(--cream);
   font: inherit;
   appearance: none;
 }
@@ -486,7 +486,7 @@ a {
 .footer-inner p,
 .footer-inner a {
   margin: 0;
-  color: var(--white);
+  color: var(--cream);
   font-weight: 700;
 }
 
