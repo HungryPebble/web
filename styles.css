@@ -127,7 +127,7 @@ a {
 
 .hero-copy {
   max-width: 560px;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .hero-kicker {
