@@ -1,13 +1,13 @@
 :root {
-  --bg: #040404;
+  --bg: ##171F1D;
   --bg-soft: #0c0f14;
   --card: #11161d;
   --card-2: #151a21;
-  --teal: #12c8d4;
+  --teal: #2C7981;
   --teal-deep: #0896a0;
-  --yellow: #f4c43f;
+  --yellow: #D6A84A;
   --yellow-deep: #d9a917;
-  --white: #f6f7f8;
+  --white: #F4EFE6;
   --text-soft: #c9d0d6;
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
