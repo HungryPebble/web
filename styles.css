@@ -8,7 +8,7 @@
   --yellow: #D6A84A;
   --yellow-deep: #d9a917;
   --white: #f6f7f8;
-  --text: #f4efef
+  --cream: #f4efef
   --text-soft: #c9d0d6;
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
@@ -127,7 +127,7 @@ a {
 
 .hero-copy {
   max-width: 560px;
-  color: var(--text);
+  color: var(--cream);
 }
 
 .hero-kicker {
