@@ -9,7 +9,7 @@
   --yellow-deep: #d9a917;
   --white: #f6f7f8;
   --cream: #f4efef
-  --text-soft: #c9d0d6;
+  --text-soft: #f4efef;
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
   --radius-xl: 28px;
@@ -29,7 +29,7 @@ body {
   margin: 0;
   font-family: "Nunito", sans-serif;
   background: var(--bg);
-  color: var(--white);
+  color: var(--cream);
 }
 
 img {
@@ -79,7 +79,7 @@ a {
 .site-nav a {
   font-weight: 800;
   font-size: 0.98rem;
-  color: var(--white);
+  color: var(--cream);
   transition: 0.2s ease;
 }
 
@@ -149,7 +149,7 @@ a {
   font-family: "Baloo 2", cursive;
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 0.95;
-  color: var(--white);
+  color: var(--cream);
 }
 
 .hero-text {
