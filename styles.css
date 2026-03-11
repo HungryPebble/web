@@ -443,6 +443,32 @@ a {
   flex: 0 0 auto;
 }
 
+.contact-form select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background:
+    linear-gradient(45deg, transparent 50%, var(--yellow) 50%),
+    linear-gradient(135deg, var(--yellow) 50%, transparent 50%),
+    #121821;
+  background-position:
+    calc(100% - 20px) calc(50% - 3px),
+    calc(100% - 14px) calc(50% - 3px),
+    100% 0;
+  background-size: 6px 6px, 6px 6px, 2.8rem 100%;
+  background-repeat: no-repeat;
+  color: var(--white);
+  font: inherit;
+  appearance: none;
+}
+
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(18, 200, 212, 0.15);
+}
+
 /* Footer */
 .site-footer {
   background: #020202;
